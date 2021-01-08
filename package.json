@@ -27,6 +27,11 @@
 		"name": "Love Bhardwaj",
 		"email": "developerphilosophy@gmail.com"
 	},
+	"homepage": "https://github.com/developerphilosophy/envar-check#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/developerphilosophy/envar-check"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"@types/chai": "^4.2.14",
