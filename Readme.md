@@ -1,6 +1,6 @@
 # Environment Variable Check
 
-A small library to check if environment variable or variables are set or not. This is limited to Node process as the library checks for environment variables set on _process.env_ available in a node process. Very light weight library with simple implementation.
+A small library to check if environment variable or variables are set or not. This is limited to Node process as the library checks for environment variables set on _process.env_ object available in a node process. Very light weight library with simple implementation.
 
 ## Import:
 
@@ -30,10 +30,16 @@ The second argument to the function is option as it defaults to **FATAL** is no 
 
 ### Return values:
 
-If envCheck is called with severity of **DEBUG** or **WARN**. If environment variables are set it return true and if not set then returns false. For **FATAL** severity the function returns nothing as process exists, so return something is counter intuitive.
+If _envCheck_ is called with severity of **DEBUG** or **WARN**. If environment variables are set it return true and if not set then returns false. For **FATAL** severity the function returns nothing as process exists, so return something is counter intuitive.
 
 ```ts
 envCheck("PORT", Severity.DEBUG);
 envCheck("PORT", Severity.WARN);
 envCheck("PORT", Severity.FATAL);
+
+/**
+ * Pass environment variable name array to check multiple
+ * environment variables
+ */
+envCheck(["PORT", "DATABASE_URL", "API_KEY"], Severity.WARN);
 ```
